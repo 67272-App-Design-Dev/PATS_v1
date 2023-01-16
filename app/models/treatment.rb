@@ -27,7 +27,7 @@ class Treatment < ApplicationRecord
       cost_of_new_procedure = previous_costs.first.cost
     end
     new_charge = previous_charge + (cost_of_new_procedure * (1 - self.discount))
-    visit.update_attribute(:total_charge, new_charge)
+    visit.update_column(:total_charge, new_charge)
   end
 
   def refund_amount_in_cost_of_visit
@@ -40,6 +40,6 @@ class Treatment < ApplicationRecord
       cost_of_old_procedure = previous_costs.first.cost
     end
     revised_charge = previous_charge - (cost_of_old_procedure * (1 - self.discount))
-    visit.update_attribute(:total_charge, revised_charge)    
+    visit.update_column(:total_charge, revised_charge)    
   end
 end

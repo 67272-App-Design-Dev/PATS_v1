@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     end
   
     def update
-      if @user.update_attributes(user_params)
+      if @user.update(user_params)
         flash[:notice] = "Successfully updated #{@user.proper_name}."
         redirect_to users_url
       else

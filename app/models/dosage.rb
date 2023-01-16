@@ -57,7 +57,7 @@ class Dosage < ApplicationRecord
       cost_per_unit_of_new_meds = previous_costs.first.cost_per_unit
     end
     new_charge = previous_charge + (self.units_given * cost_per_unit_of_new_meds * (1 - self.discount))
-    visit.update_attribute(:total_charge, new_charge)
+    visit.update_column(:total_charge, new_charge)
   end
 
   def refund_amount_in_cost_of_visit
@@ -70,13 +70,13 @@ class Dosage < ApplicationRecord
       cost_per_unit_of_old_meds = previous_costs.first.cost_per_unit
     end
     revised_charge = previous_charge - (self.units_given * cost_per_unit_of_old_meds * (1 - self.discount))
-    visit.update_attribute(:total_charge, revised_charge)    
+    visit.update_column(:total_charge, revised_charge)    
   end
 
   def reduce_stock_amount_of_medicine_used
     previous_amount = self.medicine.stock_amount
     new_amount = previous_amount - self.units_given
-    self.medicine.update_attribute(:stock_amount, new_amount)
+    self.medicine.update_column(:stock_amount, new_amount)
   end
 
 end

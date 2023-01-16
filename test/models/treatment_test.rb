@@ -52,6 +52,7 @@ class TreatmentTest < ActiveSupport::TestCase
       costs_for_t2 = ProcedureCost.for_procedure(@xray.id).for_date(@visit1.date).first.cost
       additional_charge = (1-visit1_t2.discount) * costs_for_t2
       assert_equal (old_charge + additional_charge), @visit1.total_charge
+      visit1_t2.delete
     end
 
     # test callback 'refund_amount_in_cost_of_visit'

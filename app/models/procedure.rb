@@ -33,7 +33,7 @@ class Procedure < ApplicationRecord
 
   # def convert_to_inactive
   #   if !destroyable.nil? && destroyable == false
-  #     self.update_attribute(:active, false)
+  #     self.update_column(:active, false)
   #   end
   #   @destroyable = nil
   # end

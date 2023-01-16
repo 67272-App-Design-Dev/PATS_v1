@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.9'
+ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.6'
+gem 'rails', '6.1.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -41,7 +41,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Other gems
 gem 'chronic', '0.10.2'
 gem 'materialize-sass', '~> 1.0.0'
-gem 'simple_form'
+# gem 'simple_form'
+gem 'simple_form', '4.0.0'
 gem 'materialize-form', git: 'https://github.com/cmu-is-projects/materialize-form.git'
 gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails', '6.0.1'
@@ -68,11 +69,14 @@ group :development, :test do
   gem 'populator'
   gem 'factory_bot_rails'
   gem 'simplecov'
-  gem 'shoulda', '3.5.0'
-  gem 'shoulda-matchers', '2.8.0'
-  gem 'minitest-rails', '3.0.0'
-  gem 'minitest-reporters', '1.1.19'
+  # gem 'shoulda', '3.5.0'
+  # gem 'shoulda-matchers', '2.8.0'
+  gem 'shoulda-context', '~> 2.0.0'
+  gem 'shoulda-matchers', '~> 5.0.0'
+  gem 'minitest-rails', '6.1.0'
+  gem 'minitest-reporters', '1.5.0'
   gem 'rails-controller-testing'
+  # gem 'rails-controller-testing', '1.0.5'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
@@ -84,15 +88,13 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.1.0'
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -33,7 +33,7 @@ class PetsController < ApplicationController
   end
 
   def update
-    if @pet.update_attributes(pet_params)
+    if @pet.update(pet_params)
       redirect_to @pet, notice: "Updated #{@pet.name}'s information"
     else
       render action: 'edit'

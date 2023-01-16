@@ -53,6 +53,7 @@ class MedicineCostTest < ActiveSupport::TestCase
       @change_cost = FactoryBot.create(:medicine_cost, medicine: @carprofen, start_date: 1.month.ago.to_date, cost_per_unit: 60)
       @carprofen_c1.reload
       assert_equal 1.month.ago.to_date, @carprofen_c1.end_date
+      @change_cost.delete
     end
 
   end

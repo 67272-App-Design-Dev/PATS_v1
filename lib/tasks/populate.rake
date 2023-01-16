@@ -134,9 +134,12 @@ namespace :db do
     # Step 5: add 240 owners to the system and associated pets
     240.times do 
       owner = Owner.new
+      owner_user = User.new
       # get some fake data using the Faker gem
       owner.first_name = Faker::Name.first_name
+      owner_user.first_name = owner.first_name
       owner.last_name = Faker::Name.last_name
+      owner_user.last_name = owner.last_name
       owner.street = Faker::Address.street_address
       owner.city = "Pittsburgh"
       # assume PA since this is a Pittsburgh vet office
@@ -149,7 +152,15 @@ namespace :db do
       owner.email = "#{owner.first_name.downcase}.#{owner.last_name.downcase}@example.com"
       # assume all the owners still have living pets
       owner.active = true
+      owner_user.active = true
+      # finish off the owner_user so we can get the user_id
+      owner_user.username = "#{owner.first_name[0].downcase}#{owner.last_name.downcase}#{rand(98)+1}"
+      owner_user.password = "secret"
+      owner_user.password_confirmation = "secret"
+      owner_user.role = "owner"
+      owner_user.save!
       # save the owner
+      owner.user_id = owner_user.id
       owner.save!
     end
     # an array of all owner ids

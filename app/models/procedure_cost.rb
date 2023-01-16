@@ -19,6 +19,6 @@ class ProcedureCost < ApplicationRecord
   private
   def set_end_date_of_old_cost
     previous = ProcedureCost.current.for_procedure(self.procedure_id).take
-    previous.update_attribute(:end_date, self.start_date) unless previous.nil?
+    previous.update_column(:end_date, self.start_date) unless previous.nil?
   end
 end

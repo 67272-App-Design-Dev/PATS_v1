@@ -77,6 +77,8 @@ class DosageTest < ActiveSupport::TestCase
       unit_costs_for_d2 = MedicineCost.for_medicine(@amoxicillin.id).for_date(@visit1.date).first.cost_per_unit
       additional_charge = visit1_d2.units_given.to_f * (1-visit1_d2.discount) * unit_costs_for_d2
       assert_equal (old_charge + additional_charge), @visit1.total_charge
+
+      visit1_d2.delete
     end
 
     # test callback 'refund_amount_in_cost_of_visit'
@@ -94,6 +96,7 @@ class DosageTest < ActiveSupport::TestCase
       visit1_d2 = FactoryBot.create(:dosage, visit: @visit1, medicine: @amoxicillin)
       @amoxicillin.reload
       assert_equal (original_stock_amount - visit1_d2.units_given), @amoxicillin.stock_amount
+      visit1_d2.delete
     end
 
   end

@@ -32,7 +32,7 @@ class MedicinesController < ApplicationController
   end
   
   def update
-    if @medicine.update_attributes(medicine_params)
+    if @medicine.update(medicine_params)
       flash[:notice] = "Successfully updated #{@medicine.name}."
       redirect_to @medicine
     else

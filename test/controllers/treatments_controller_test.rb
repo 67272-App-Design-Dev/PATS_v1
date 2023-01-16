@@ -3,9 +3,10 @@ require 'test_helper'
 class TreatmentsControllerTest < ActionDispatch::IntegrationTest
   setup do
     login_vet
+    @user = FactoryBot.create(:user)
     @procedure = FactoryBot.create(:procedure)
     @animal    = FactoryBot.create(:animal)
-    @owner     = FactoryBot.create(:owner)
+    @owner     = FactoryBot.create(:owner, user: @user)
     @pet       = FactoryBot.create(:pet, owner: @owner, animal: @animal)
     @visit     = FactoryBot.create(:visit, pet: @pet)
     @treatment = FactoryBot.create(:treatment, visit: @visit, procedure: @procedure)

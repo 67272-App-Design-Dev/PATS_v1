@@ -53,6 +53,7 @@ class ProcedureCostTest < ActiveSupport::TestCase
       @change_cost = FactoryBot.create(:procedure_cost, procedure: @xray, start_date: 1.month.ago.to_date, cost: 4500)
       @xray_c1.reload
       assert_equal 1.month.ago.to_date, @xray_c1.end_date
+      @change_cost.delete
     end
 
   end

@@ -32,7 +32,7 @@ class ProceduresController < ApplicationController
   end
   
   def update
-    if @procedure.update_attributes(procedure_params)
+    if @procedure.update(procedure_params)
       flash[:notice] = "Successfully updated #{@procedure.name}."
       redirect_to @procedure
     else
