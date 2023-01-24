@@ -21,7 +21,7 @@ namespace :db do
     user.username = "vet"
     user.password = "yodel"
     user.password_confirmation = "yodel"
-    user.role = "vet"    
+    user.vet!
     user.save!
     
     # -----------------------    
@@ -95,7 +95,7 @@ namespace :db do
       m.name = medicine
       m.description = vars[1]
       m.unit = ['mililiters', 'miligrams'].sample
-      m.admin_method = ['oral','injection','intravenous','topical'].sample
+      m.admin_method = Medicine.admin_methods[Medicine.admin_methods.to_a.sample]
       m.stock_amount = rand(200000) + 50000
       m.vaccine = false
       m.active = true
@@ -157,7 +157,7 @@ namespace :db do
       owner_user.username = "#{owner.first_name[0].downcase}#{owner.last_name.downcase}#{rand(98)+1}"
       owner_user.password = "secret"
       owner_user.password_confirmation = "secret"
-      owner_user.role = "owner"
+      owner_user.owner!
       owner_user.save!
       # save the owner
       owner.user_id = owner_user.id

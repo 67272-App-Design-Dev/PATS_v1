@@ -26,6 +26,14 @@ class Medicine < ApplicationRecord
   # Other methods
   # attr_accessor :destroyable
 
+  enum :admin_method, { oral: 1, injection: 2, intravenous: 3, topical: 4}, scopes: false
+  ADMIN_METHODS = [
+    ["Oral", Medicine.admin_methods[:oral]],
+    ["Injection", Medicine.admin_methods[:injection]],
+    ["Intravenous", Medicine.admin_methods[:intravenous]],
+    ["Topical", Medicine.admin_methods[:topical]],
+  ]
+
   def is_vaccine?
     vaccine
   end

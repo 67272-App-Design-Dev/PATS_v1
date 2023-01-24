@@ -34,6 +34,16 @@ class User < ApplicationRecord
   has_many :notes
   has_one :owner
 
+  # enums
+  enum :role, { vet: 1, assistant: 2, owner: 3}, scopes: true, default: :owner
+
+  # for use in authorizing with CanCan
+  ROLES = [
+    ['Vet', :vet],
+    ['Assistant', :assistant],
+    ['Owner', :owner]
+  ]
+
   # Validations
   # make sure required fields are present
   validates_presence_of :first_name, :last_name, :username 
@@ -63,21 +73,4 @@ class User < ApplicationRecord
   def self.authenticate(username, password)
       find_by_username(username).try(:authenticate, password)
   end
-  
-  
-  
-  
-  
-  
-  
-  # for use in authorizing with CanCan
-  ROLES = [['Vet', :vet],['Assistant', :assistant],['Owner', :owner]]
-
-  # the role? method checks if the user has a role among the ones we define here. 
-  def role?(authorized_role)
-    return false if role.nil?
-    role.downcase.to_sym == authorized_role
-  end
-
-
 end

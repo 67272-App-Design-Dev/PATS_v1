@@ -36,7 +36,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     @user = User.new(user_params)
-    @user.role = "owner"
+    @user.owner!
     if !@user.save
       @owner.valid?
       render action: 'new'

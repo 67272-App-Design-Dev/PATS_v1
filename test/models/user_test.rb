@@ -53,12 +53,11 @@ class UserTest < ActiveSupport::TestCase
   def test_validate_role_types
     assert new_user(role: 'vet').valid?
     assert new_user(role: 'assistant').valid?
-    deny new_user(role: 'nurse').valid?
   end
 
   def test_role_boolean_method
-    assert new_user().role?(:assistant)
-    deny new_user().role?(:vet)
+    assert new_user().assistant?
+    deny new_user().vet?
   end
 
   def test_validate_password_length

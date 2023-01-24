@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_033720) do
     t.string "name"
     t.text "description"
     t.integer "stock_amount"
-    t.string "admin_method"
+    t.integer "admin_method"
     t.string "unit"
     t.boolean "vaccine"
     t.boolean "active", default: true
@@ -140,7 +140,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_033720) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "role"
+    t.integer "role"
     t.string "username"
     t.string "password_digest"
     t.boolean "active"

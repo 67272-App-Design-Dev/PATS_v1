@@ -9,11 +9,11 @@ class Ability
 
     
     # set authorizations for different user roles
-    if user.role? :vet
+    if user.vet?
       # they get to do it all
       can :manage, :all
       
-    elsif user.role? :assistant
+    elsif user.assistant?
       # can manage owners, pets, and visits
       # an assistant can do anything for owner, pets, and visits. 
       # For instance, any action available in OwnersController, they can do it same for Pets and Visits.
@@ -46,7 +46,7 @@ class Ability
         u.id == user.id
       end
 
-    elsif user.role? :owner
+    elsif user.owner?
       # they can read their own data
       can :show, Owner do |this_owner|  
         user.owner == this_owner
