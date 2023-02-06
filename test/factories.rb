@@ -43,6 +43,7 @@ FactoryBot.define do
   end  
 
   factory :owner do
+    association :user
     first_name {"Alex"}
     last_name {"Heimann"}
     street {"10152 Sudberry Drive"}
