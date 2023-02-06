@@ -22,13 +22,6 @@ class User < ApplicationRecord
   #  manage to obtain a copy of the database. 
   # To use bcrypt in the sample application, we need to add the bcrypt gem to our Gemfile (Check line 29 of the Gemfile).
 
-  # Example:
-  # rails console
-  # >> User.create(first_name: "Houda", last_name:"bouamor", username: "hbouamor", role:"vet",
-                #  password: "foobar", password_confirmation: "foobar", active:true)
-    # => #<User id: 2, first_name: "Houda", last_name: "bouamor", role: "vet", 
-    # username: "hbouamor", password_digest: "$2a$12$yiGEoc10GgXCucq9XryyQOXT0wxwNO76gUSdIl3SAMp...", active: true">
-  
     
   # Relationships
   has_many :notes
