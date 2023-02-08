@@ -21,7 +21,7 @@ namespace :db do
     user.username = "vet"
     user.password = "yodel"
     user.password_confirmation = "yodel"
-    user.vet!
+    user.role = "vet"
     user.save!
     
     # -----------------------    
