@@ -39,29 +39,25 @@ Rails.application.routes.draw do
   resources :procedures
 
   # Routes for mecidine and procedure costs
-# In some cases, we would like to create our own routes. 
-# For example, let's say we say that there should not be an index page for medicine cost,
-#  If we were to open medicine_cost in PATS, we did not design a whole index page for it, but associated it instead with a particular medicine. 
-# A particular cost could be added this way, and the costs  of a certain medicine including the one we added can be displayed only on this one page
-#  in addition to the details of the medicine.
-#  There is no need to create a full index page of all teh costs page with medicine cost.
-# So, in this particular case, we would not want to use resources, but rather create the paths manually.
-#  Add routes for the functions offered only: so, we need a form to add a new medicine_cost.
-# We specify the: 
-# - get: my http verb
-# - my URL: medicine_cost/new
-# Map to this controller#action combination, and then this 'as', this is where I am creating for myself a named helper. 
-# So if I say new_medicine_cost_path, it would take me to that empty form to fill it and create a new medecine 
+  # In some cases, we would like to create our own routes. 
+  # For example, let's say we say that there should not be an index page for medicine cost,
+  #  If we were to open medicine_cost in PATS, we did not design a whole index page for it, but associated it instead with a particular medicine. 
+  # A particular cost could be added this way, and the costs  of a certain medicine including the one we added can be displayed only on this one page
+  #  in addition to the details of the medicine.
+  #  There is no need to create a full index page of all teh costs page with medicine cost.
+  # So, in this particular case, we would not want to use resources, but rather create the paths manually.
+  #  Add routes for the functions offered only: so, we need a form to add a new medicine_cost.
+  # We specify the: 
+  # - get: my http verb
+  # - my URL: medicine_cost/new
+  # Map to this controller#action combination, and then this 'as', this is where I am creating for myself a named helper. 
+  # So if I say new_medicine_cost_path, it would take me to that empty form to fill it and create a new medecine 
   get 'medicine_costs/new', to: 'medicine_costs#new', as: :new_medicine_cost
   get 'procedure_costs/new', to: 'procedure_costs#new', as: :new_procedure_cost
 
   post 'medicine_costs', to: 'medicine_costs#create', as: :medicine_costs
   post 'procedure_costs', to: 'procedure_costs#create', as: :procedure_costs
   
-
-
-
-
   # Semi-static page routes
   get 'home', to: 'home#index', as: :home
   get 'home/about', to: 'home#about', as: :about
@@ -69,8 +65,6 @@ Rails.application.routes.draw do
   get 'home/privacy', to: 'home#privacy', as: :privacy
   # You can have the root of your site routed with 'root'
   root 'home#index'
-
-
 
   get 'home/search', to: 'home#search', as: :search
   # Routes for searching

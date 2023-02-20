@@ -15,7 +15,7 @@ class PetsController < ApplicationController
   end
 
   def show
-    #  Show the pet's details using id; done with before_action
+    # Show the pet's details using id; done with before_action
     # @pet = Pet.find(params[:id])
 
     # get the last 10 visits for this pet
