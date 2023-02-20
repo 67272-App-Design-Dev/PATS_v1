@@ -7,15 +7,18 @@ class OwnersController < ApplicationController
   def index
     # finding all the active owners and paginating that list (will_paginate)
     @active_owners = Owner.active.alphabetical.paginate(page: params[:page]).per_page(15)
+
+    # render template[:index]
+    # layout 'application'
   end
 
   def show
-  #  Show the owner's details using his id
+    #  Show the owner's details using his id
     # @owner = Owner.find(params[:id])
-     # get all the pets for this owner
+    # get all the pets for this owner
     @current_pets = @owner.pets.alphabetical.active.to_a
 
-     # render template[:show]
+    # render template[:show]
     # layout 'application'
 
   end
@@ -53,7 +56,7 @@ class OwnersController < ApplicationController
 
 
   def update
-     # @owner = Owner.find(params[:id])
+    # @owner = Owner.find(params[:id])
     if @owner.update(owner_params)
       flash[:notice] = "Successfully updated #{@owner.proper_name}."
       redirect_to @owner
