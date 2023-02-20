@@ -26,6 +26,7 @@ class PetsController < ApplicationController
   end
 
   def new
+    # create an empty pet object to populate with data
     @pet = Pet.new
 
     # render template[:new]
