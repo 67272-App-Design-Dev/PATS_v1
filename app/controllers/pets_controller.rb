@@ -34,7 +34,7 @@ class PetsController < ApplicationController
   end
 
   def edit
-    # get @pet
+    # get @pet... before_action does the following:
     # @pet = Pet.find(params[:id])
     # render template[:edit]
     # layout 'application'
