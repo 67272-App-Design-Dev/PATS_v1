@@ -4,7 +4,7 @@ class Owner < ApplicationRecord
   # create a callback that will strip non-digits before saving to db
   before_save :reformat_phone
 
-    # Delegates
+  # Delegates
   delegate :username, to: :user, allow_nil: true
   
   # Relationships
@@ -39,7 +39,7 @@ class Owner < ApplicationRecord
   # Validations
   # -----------------------------
   # make sure required fields are present
-  validates_presence_of :first_name, :last_name, :email, :phone
+  validates_presence_of :first_name, :last_name, :email, :phone #message: "can't be blank"
   # if zip included, it must be 5 digits only
   validates_format_of :zip, with: /\A\d{5}\z/, message: "should be five digits long", allow_blank: true
   # phone can have dashes, spaces, dots and parens, but must be 10 digits

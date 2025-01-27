@@ -3,7 +3,7 @@
     <h5>Pet Information for <%= @pet.name %></h5><br />
 
     <b>Owner:&nbsp;&nbsp;</b>
-      <%= link_to @pet.owner.name, owner_path(@pet.owner) %><br /><br />
+      <%= link_to @pet.owner.proper_name, owner_path(@pet.owner) %><br /><br />
 
     <b>Type:&nbsp;&nbsp;</b>
       <%= @pet.animal.name %><br /><br />

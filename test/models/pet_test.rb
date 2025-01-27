@@ -46,7 +46,7 @@ class PetTest < ActiveSupport::TestCase
     
     # test the scope 'active'
     should "have all active pets accounted for" do
-      assert_equal 2, Pet.active.size 
+      assert_equal 2, Pet.active.size
     end
 
     # test the scope 'inactive'
