@@ -5,12 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '3.1.2'
+ruby '3.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '7.0.4'
+gem 'concurrent-ruby', '1.3.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.4.2'
+gem 'sqlite3', '1.5.0'
 # Use Puma as the app server
 gem 'puma', '4.1'
 # Use SCSS for stylesheets
@@ -46,7 +47,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails', '6.0.1'
 gem 'cancancan', '3.4.0'
 # TODO: when 7.0.0 is released, don't download from git
-gem 'validates_timeliness', git: "https://github.com/adzap/validates_timeliness"
+gem 'validates_timeliness', '7.0.0'
 gem 'time_date_helpers', '0.0.2'
 gem 'carrierwave', '1.2.2'
 gem 'will_paginate', '3.3.1'
