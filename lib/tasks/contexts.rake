@@ -19,7 +19,7 @@ namespace :db do
     puts "Contexts enabled"
 
     if Contexts.respond_to?(:create_all)
-      # Rails 8 way to reset connections
+      # Rails 8 way to reset connections (test was last invoked on line 12; go back to development)
       ActiveRecord::Base.connection_pool.disconnect!
       # Re-establish connection
       ActiveRecord::Base.establish_connection(Rails.env.to_sym)
