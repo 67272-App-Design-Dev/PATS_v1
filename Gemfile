@@ -52,6 +52,7 @@ gem "time_date_helpers"
 gem "carrierwave"
 gem "simple_form"
 gem "will_paginate"
+gem "will_paginate-bootstrap5", "~> 0.2.4"
 
 
 group :development, :test do

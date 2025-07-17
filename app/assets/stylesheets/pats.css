@@ -29,6 +29,10 @@ html {
   padding-top: 20px;
 }
 
+p.supertiny {
+  line-height: 5px;
+}
+
 /********** FLASH MSGS ********/
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
@@ -78,12 +82,21 @@ html {
   background-color: #fff59d;
 }
 
+tbody.table-group-divider {
+  border-top-color: #000;
+  border-top-width: 2px;
+}
+
 td.text-end {
   text-align: right;
 }
 
 td.text-center {
   text-align: center;
+}
+
+th {
+  font-size: larger;
 }
 
 th.text-end {
@@ -205,6 +218,10 @@ th.text-center {
 }
 
 /********** CARDS ********/
+.card {
+  padding: 0px;
+}
+
 .card .card-body a:not(.btn) {
   color: #ffab00;
 }
@@ -285,4 +302,78 @@ th.text-center {
 
 .alert.rounded-pill {
   border-radius: 1000px;
+}
+
+
+/******** PAGINATION  *********/
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.375rem;
+  
+  .page, .prev, .next, .gap {
+    position: relative;
+    display: block;
+    color: #0d6efd;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    
+    a, span {
+      position: relative;
+      display: block;
+      padding: 0.375rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: inherit;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+    }
+    
+    &:hover {
+      z-index: 2;
+      color: #0a58ca;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+    
+    &:first-child {
+      margin-left: 0;
+      border-top-left-radius: 0.375rem;
+      border-bottom-left-radius: 0.375rem;
+    }
+    
+    &:last-child {
+      border-top-right-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+  }
+  
+  .current {
+    z-index: 3;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    
+    a, span {
+      color: #fff;
+    }
+  }
+  
+  .disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+  
+  .gap {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
 }

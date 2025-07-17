@@ -26,7 +26,6 @@
   <% end %>
 </table>
 <p class="supertiny"></p>
-<br />
-<%= will_paginate @active_pets, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
-<p>&nbsp;</p>
+<%= will_paginate @active_pets, renderer: BootstrapPaginationHelper::BootstrapLinkRenderer %>
+<p class="supertiny">&nbsp;</p>
 <%= render :partial => "partials/add_new_object", locals: {model_name: 'pet'} %>

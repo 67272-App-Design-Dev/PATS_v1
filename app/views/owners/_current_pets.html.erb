@@ -1,10 +1,10 @@
 <div class="card">
   <div class="card-body">
-    <span class="card-title"><%= @owner.first_name %>'s Pets</span>
+    <h4 class="card-title"><%= @owner.first_name %>'s Pets</h4>
     <% if @current_pets.empty? %>
       <p>No pets at this time</p>
     <% else %>
-      <table class="striped highlight">
+      <table class="table table-striped table-hover table-borderless">
         <thead>
           <th>Name</th>
           <th>Animal</th>
