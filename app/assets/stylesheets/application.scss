@@ -10,4 +10,4 @@
  *= require_tree .
  */
 
- @import "bootstrap"
+ @use "bootstrap" as *;
