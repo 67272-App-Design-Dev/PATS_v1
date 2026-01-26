@@ -23,5 +23,13 @@ module PatsV1
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # config.autoload_paths += Dir["#{config.root}/lib/**/"]  # include all subdirectories
+    config.eager_load_paths += %W[#{config.root}/lib]
+    config.eager_load_paths += %W[#{config.root}/lib/filters]
+    config.eager_load_paths += %W[#{config.root}/lib/helpers]
+
+    config.time_zone = "Eastern Time (US & Canada)"
+    config.active_record.default_timezone = :local
+    config.active_record.time_zone_aware_attributes = false
   end
 end

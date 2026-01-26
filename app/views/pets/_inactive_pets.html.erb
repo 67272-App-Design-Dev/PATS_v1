@@ -1,0 +1,13 @@
+<br />
+<% unless @inactive_pets.empty? %>
+  <div class="card yellow lighten-4">
+    <div class="card-body">
+      <h4 class="card-title">Inactive Pets</h4>
+      <ul>
+        <% for pet in @inactive_pets %>
+          <li><%= link_to pet.name, pet_path(pet) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<p class="supertiny">&nbsp;</p>
+
+<footer id="footer" class="text-center mt-auto py-3 bg-dark">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <div class="mb-2 mb-md-0">
+        <%= link_to 'Home', home_path, class: 'me-2' %>
+        <span>::</span>
+        <%= link_to 'About PATS', about_path, class: 'mx-2' %>
+        <span>::</span>
+        <%= link_to 'Contact Us', contact_path, class: 'mx-2' %>
+        <span>::</span>
+        <%= link_to 'Privacy Policy', privacy_path, class: 'ms-2' %>
+      </div>
+    </div>
+    <div id="copy" class="mt-2">
+      Webmaster: <%= mail_to("profh@cmu.edu", "Klingon Code Warrior", encode: "javascript") %> 
+      &nbsp;&nbsp;&copy; 2018
+    </div>
+  </div>
+</footer>

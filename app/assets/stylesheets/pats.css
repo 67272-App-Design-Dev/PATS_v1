@@ -1,0 +1,379 @@
+html {
+  /* Preloaded with four fonts; uncomment the one you prefer */
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-family: 'Bitter', serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Varela Round', sans-serif; */
+}
+
+/********** TOPBAR & NAV & MAIN_TEMPLATE ********/
+#topbar {
+  background-color: black;
+  padding-top: 15px;
+  padding-left: 25px;
+  margin-bottom: 0px;
+  color: #ffd600;
+}
+
+#nav {
+  background-color: black;
+  height: 50px;
+}
+
+#nav .navbar-nav .nav-link {
+  color: #ffd600 !important;
+  font-size: 1.2rem;
+}
+
+#main-template {
+  padding-top: 20px;
+}
+
+p.supertiny {
+  line-height: 5px;
+}
+
+/********** FLASH MSGS ********/
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+  color: #008000;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  color: #800000;
+}
+
+/********** FOOTER ********/
+#footer {
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  color: yellow;
+  line-height: 2rem;
+  position: relative;
+}
+
+#footer a {
+  color: #ffd600;
+}
+
+/********** TABLES ********/
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #fff;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #fff59d;
+}
+
+tbody.table-group-divider {
+  border-top-color: #000;
+  border-top-width: 2px;
+}
+
+td.text-end {
+  text-align: right;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+th {
+  font-size: larger;
+}
+
+th.text-end {
+  text-align: right;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+/********** BUTTONS ********/
+.btn-primary {
+  background-color: #ffd600;
+  border-color: #ffd600;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #ffff00;
+  border-color: #ffff00;
+  color: #000;
+}
+
+.btn-secondary {
+  background-color: #eceff1;
+  border-color: #eceff1;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #cfd8dc;
+  border-color: #cfd8dc;
+  color: #000;
+}
+
+.btn-danger {
+  background-color: #c62828;
+  border-color: #c62828;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #e53935;
+  border-color: #e53935;
+  color: #fff;
+}
+
+/********** FORMS ********/
+/* Bootstrap 5 uses different switch/toggle structure */
+.form-check-input:checked {
+  background-color: #ffd600;
+  border-color: #ffd600;
+}
+
+.form-check-input:focus {
+  border-color: #ffd600;
+  box-shadow: 0 0 0 0.25rem rgba(255, 214, 0, 0.25);
+}
+
+/* Custom date picker styling - may need adjustment based on your date picker library */
+.picker__date-display {
+  background-color: #ffd600;
+  color: #000;
+}
+
+.picker__year-display {
+  color: #000;
+}
+
+.form-control.search {
+  border-bottom: none;
+  margin-left: 10px;
+}
+
+.picker__day--selected, 
+.picker__day--selected:hover, 
+.picker--focused .picker__day--selected {
+  border-radius: 50%;
+  transform: scale(0.9);
+  background-color: #ffd600;
+  color: #000;
+}
+
+/* Custom checkbox and radio styling */
+.form-check-input[type="checkbox"]:checked {
+  background-color: #ffd600;
+  border-color: #ffd600;
+}
+
+.form-check-input[type="radio"]:checked {
+  background-color: #ffd600;
+  border-color: #ffd600;
+}
+
+/********** MEDIA ********/
+.img-start {
+  float: left;
+  padding-right: 10px;
+}
+
+.img-end {
+  float: right;
+  padding-left: 10px;
+}
+
+.carousel-height-250 {
+  height: 350px;
+}
+
+.carousel-height-250 .carousel-inner,
+.carousel-height-250 .carousel-item {
+  height: 3050px;
+}
+
+.carousel-height-250 .carousel-item img {
+  height: 350px;
+  object-fit: cover; /* Maintains aspect ratio, crops if needed */
+  object-position: center; /* Centers the cropped image */
+}
+
+/********** CARDS ********/
+.card {
+  padding: 0px;
+}
+
+.card .card-body a:not(.btn) {
+  color: #ffab00;
+}
+
+.card-footer a:not(.btn) {
+  color: #ffab00;
+}
+
+.remove {
+  color: #b71c1c;
+}
+
+/********** BOOTSTRAP ALERTS (replacing custom alert-box) ********/
+.alert {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+  padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+  position: relative;
+  transition: opacity 300ms ease-out;
+}
+
+.alert-primary {
+  background-color: #008CBA;
+  border-color: #0078a0;
+  color: #FFFFFF;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+  color: #1b5e20;
+}
+
+.alert-danger {
+  background-color: #f04124;
+  border-color: #de2d0f;
+  color: #FFFFFF;
+}
+
+.alert-secondary {
+  background-color: #e7e7e7;
+  border-color: #c7c7c7;
+  color: #4f4f4f;
+}
+
+.alert-warning {
+  background-color: #fff3e0;
+  border-color: #ffcc80;
+  color: #ef6c00;
+}
+
+.alert-info {
+  background-color: #a0d3e8;
+  border-color: #74bfdd;
+  color: #4f4f4f;
+}
+
+.alert .btn-close {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  margin-top: -0.6875rem;
+  opacity: 0.3;
+}
+
+.alert .btn-close:hover,
+.alert .btn-close:focus {
+  opacity: 0.5;
+}
+
+.alert.rounded {
+  border-radius: 3px;
+}
+
+.alert.rounded-pill {
+  border-radius: 1000px;
+}
+
+
+/******** PAGINATION  *********/
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.375rem;
+  
+  .page, .prev, .next, .gap {
+    position: relative;
+    display: block;
+    color: #0d6efd;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    
+    a, span {
+      position: relative;
+      display: block;
+      padding: 0.375rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: inherit;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+    }
+    
+    &:hover {
+      z-index: 2;
+      color: #0a58ca;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+    
+    &:first-child {
+      margin-left: 0;
+      border-top-left-radius: 0.375rem;
+      border-bottom-left-radius: 0.375rem;
+    }
+    
+    &:last-child {
+      border-top-right-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+  }
+  
+  .current {
+    z-index: 3;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    
+    a, span {
+      color: #fff;
+    }
+  }
+  
+  .disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+  
+  .gap {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+}
