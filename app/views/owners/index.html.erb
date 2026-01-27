@@ -17,11 +17,11 @@
           <td><%= mail_to owner.email, owner.email, encode: "javascript" %></td>
           <td class="align_center">
             <%= link_to edit_owner_path(owner) do %>
-                <i class="material-icons">edit</i>
+                <i class="bi bi-pencil text-primary"></i>
             <% end %>
-            &nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <%= link_to(owner_path(owner), method: :delete, data: { confirm: 'Are you sure you wish to delete this information?' }) do %>
-                <i class="material-icons">delete</i>
+                <i class="bi bi-trash text-primary"></i>
             <% end %>
           </td>
         </tr>

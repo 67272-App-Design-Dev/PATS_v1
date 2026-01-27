@@ -69,12 +69,12 @@ p.supertiny {
 /********** TABLES ********/
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td,
 .table-striped > tbody > tr:nth-child(even) > th {
-  background-color: #fff;
+  background-color: #fffde7 !important;
 }
 
 .table-hover > tbody > tr:hover > td,
