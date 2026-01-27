@@ -203,7 +203,7 @@ GEM
     google-protobuf (4.31.1-x86_64-linux-musl)
       bigdecimal
       rake (>= 13)
-    hirb (0.7.3)
+    hirber (0.8.9)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     image_processing (1.14.0)
@@ -543,7 +543,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
-  hirb
+  hirber
   importmap-rails
   jbuilder
   jquery-rails
