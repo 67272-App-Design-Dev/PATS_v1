@@ -5,6 +5,7 @@ class OwnerTest < ActiveSupport::TestCase
   # Relationship macros...
   should have_many(:pets)
   should have_many(:visits).through(:pets)
+  should belong_to(:user)
 
   # Validation macros...
   should validate_presence_of(:first_name)
