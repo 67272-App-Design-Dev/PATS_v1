@@ -18,8 +18,8 @@ class Dosage < ApplicationRecord
   validate :medicine_matches_animal_type
 
   # Callbacks
-  after_create :reduce_stock_amount_of_medicine_used
   before_create :update_total_cost_of_visit
+  after_create :reduce_stock_amount_of_medicine_used
   before_destroy :refund_amount_in_cost_of_visit
 
   # Use private methods to execute the custom validations
