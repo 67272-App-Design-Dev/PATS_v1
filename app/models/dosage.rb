@@ -10,6 +10,7 @@ class Dosage < ApplicationRecord
   scope :for_visit,     ->(visit_id) { where(visit_id: visit_id) }
   
   # Validations
+  validates_presence_of :visit_id
   validates_numericality_of :discount, :greater_than_or_equal_to => 0, :less_than_or_equal_to => 1
   validates_numericality_of :units_given, :greater_than => 0, :only_integer => true
   # make sure the medicine selected is one that is offered by PATS
