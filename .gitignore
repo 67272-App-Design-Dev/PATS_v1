@@ -47,3 +47,8 @@
 /app/assets/stylesheets/.DS_Store
 /app/assets/javascripts/.DS_Store
 /test/.DS_Store
+
+# Ignore misc files
+/screenshots
+.claude
+test/PATS_v1.code-workspace

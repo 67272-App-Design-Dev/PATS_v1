@@ -66,7 +66,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "binding_of_caller"
-  gem "hirb"
+  gem "hirber"
   gem "faker"
   gem "populator"
   gem "factory_bot_rails"

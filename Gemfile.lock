@@ -205,7 +205,7 @@ GEM
     google-protobuf (4.33.5-x86_64-linux-musl)
       bigdecimal
       rake (>= 13)
-    hirb (0.7.3)
+    hirber (0.8.9)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     image_processing (1.14.0)
@@ -551,7 +551,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
-  hirb
+  hirber
   importmap-rails
   jbuilder
   jquery-rails
@@ -661,7 +661,7 @@ CHECKSUMS
   google-protobuf (4.33.5-arm64-darwin) sha256=996d4e93c4232cc42f0facd821a92b4f4a926c3c9c1a768e7d768b33d9ef72f9
   google-protobuf (4.33.5-x86_64-linux-gnu) sha256=a782adf86bfba207740b49d7bb9ccdc25c4fb8f800fe222af62bce951149338a
   google-protobuf (4.33.5-x86_64-linux-musl) sha256=d14feec9118f44cfdc3ee4a1d1baa4e6dd77fa418967ccf22ecbe76b8c1bacbf
-  hirb (0.7.3) sha256=5132733ca44b1f41f36c624693a3201284368a349dfe37f543ae6e2ad880ec57
+  hirber (0.8.9) sha256=0725e66130242f75767228b6ac021c8a6b21685fe1a4776189a731330cff39b5
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   image_processing (1.14.0) sha256=754cc169c9c262980889bec6bfd325ed1dafad34f85242b5a07b60af004742fb
   importmap-rails (2.2.3) sha256=7101be2a4dc97cf1558fb8f573a718404c5f6bcfe94f304bf1f39e444feeb16a

@@ -7,6 +7,7 @@ class DosageTest < ActiveSupport::TestCase
   should have_one(:pet).through(:visit)
 
   # Validation macros
+  should validate_presence_of(:visit_id)
   should validate_numericality_of(:discount).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(1)
   should validate_numericality_of(:units_given).only_integer.is_greater_than(0)
 

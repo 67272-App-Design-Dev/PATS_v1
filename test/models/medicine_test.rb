@@ -12,6 +12,14 @@ class MedicineTest < ActiveSupport::TestCase
   should validate_presence_of(:name)
   should validate_numericality_of(:stock_amount).only_integer.is_greater_than_or_equal_to(0)
 
+  should allow_value("oral").for(:admin_method)
+  should allow_value("injection").for(:admin_method)
+  should allow_value("intravenous").for(:admin_method)
+  should allow_value("topical").for(:admin_method)
+  # should_not allow_value("forced").for(:admin_method)
+  # should_not allow_value("").for(:admin_method)
+  # should_not allow_value(nil).for(:admin_method)
+
   context "Creating medicines context" do
     setup do
       create_medicines
